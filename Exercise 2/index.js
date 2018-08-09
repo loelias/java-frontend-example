@@ -1,5 +1,5 @@
 function adicionaDiv() {
-        var divList = document.getElementsByTagName("div");
+        var divList = document.querySelectorAll("div");
         
         for (var i = 0; i < divList.length; i++) {
             var novaDiv = document.createElement("div");
