@@ -1,18 +1,21 @@
 function adicionaDiv() {
-        var divList = document.querySelectorAll("div");
-        
-        for (var i = 0; i < divList.length; i++) {
-            var novaDiv = document.createElement("div");
+    var divList = $("body").find("div");
+    
+    divList.each(function(){
+        var novaDiv = $("<div><div>");
 
         decorarDiv(novaDiv);
-        divList[i].appendChild(novaDiv);
-        }
-    }
+        $(this).append(novaDiv);
+    });
+    
+}
 
-    function decorarDiv(div) {
-        div.textContent = 'Nova Div';
-    }
+function decorarDiv(div) {
+    div.text('Nova Div');
+}
 
-window.onload = adicionaDiv;
+$(document).ready(function(){
+    adicionaDiv();
+});
 
 module.exports = adicionaDiv;
