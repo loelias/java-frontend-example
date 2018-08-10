@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" method="POST" class="form-person">
+        <div class="container">
+            <div class="header">
+                <h1>Adicionar Pessoa</h1>
+                <button type="button" onclick="alert('Cadastro Cancelado')">Cancelar Cadastro</button>
+            </div>
+            <hr>
+            <section>
+                <div class="personal-information">
+                    <div class="personal-information-type">
+                        <label for="type">
+                            <span>TIPO </span>
+                            <strong>
+                                <abbr title="Necessário preencher">*</abbr>
+                            </strong>
+                        </label>
+
+                        <select id="type" required name="typefield">
+                            <option selected>Pessoa Física</option>
+                            <option>Pessoa Jurídica</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-information-treatment">
+                        <label for="treatment">
+                            <span>TRATAMENTO</span>
+                        </label>
+
+                        <input type="text" id="treatment" name="treatmentfield" placeholder="Tratamento" />
+                    </div>
+
+                    <div class="personal-information-name">
+                        <label for="name">
+                            <span>NAME </span>
+                            <strong>
+                                <abbr title="Necessário preencher">*</abbr>
+                            </strong>
+                        </label>
+
+                        <input type="text" required id="name" name="namefield" placeholder="Informe o nome completo" />
+                    </div>
+
+                    <div class="personal-information-gender">
+                        <label for="gender">
+                            <span>GÊNERO</span>
+                        </label>
+
+                        <select id="gender" name="genderfield">
+                            <option selected>Masculino</option>
+                            <option>Feminino</option>
+                        </select>
+                    </div>
+
+                    <div class="personal-information-cpf">
+                        <label for="cpf">
+                            <span>CPF</span>
+                        </label>
+
+                        <input type="text" id="cpf" name="cpffield" pattern="[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}" placeholder="000.000.000-00"
+                            maxlength="14" minlength="14" />
+                    </div>
+
+                    <div class="personal-information-rg">
+                        <label for="rg">
+                            <span>RG</span>
+                        </label>
+
+                        <input type="text" id="rg" name="rgfield" pattern="[0-9]" placeholder="Informe o RG" maxlength="15" />
+                    </div>
+
+                    <div class="personal-information-birthday">
+                        <label for="birthday">
+                            <span>NASCIMENTO</span>
+                        </label>
+
+                        <input type="date" id="birthday" name="bdayfield" placeholder="Informe a data" max="2018-12-31" min="1900-01-01" />
+                    </div>
+
+                    <div class="personal-information-lawyer">
+                        <label for="lawyer">
+                            <span>ADVOGADO?</span>
+                        </label>
+
+                        <select id="lawyer" required name="lawyerfield">
+                            <option selected>NÃO</option>
+                            <option>SIM</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="professional-information">
+                    <div class="professional-information-qualification">
+                        <label for="qualification">
+                            <span>QUALIFICAÇÃO</span>
+                        </label>
+
+                        <input type="text" id="qualification" name="qualificationfield" maxlength="300" />
+                    </div>
+
+                    <div class="professional-information-keywords">
+                        <label for="keywords">
+                            <span>PALAVRAS-CHAVE</span>
+                        </label>
+
+                        <input type="text" id="keywords" name="keywordsfield" maxlength="200" />
+                    </div>
+                </div>
+
+                <div class="contact-information">
+                    <div class="contact-information-email">
+                        <label for="emailfield">
+                            <span>E-MAIL</span>
+                        </label>
+                        <div>
+                            <select id="emailfield" name="emailfield">
+                                <option selected>Pessoal</option>
+                                <option>Comercial</option>
+                            </select>
+    
+                            <input type="email" id="emailtextfield" name="emailtextfield" placeholder="seuemail@algumacoisa.com" maxlength="150" />
+    
+                            <button>+</button>
+    
+                            <input type="radio" />Principal
+                        </div>
+                    </div>
+
+                    <div class="contact-information-tel">
+                        <label for="tel">
+                            <span>TELEFONE</span>
+                        </label>
+
+                        <div>
+                            <select id="tel" name="telfield">
+                                <option selected>Pessoal</option>
+                                <option>Comercial</option>
+                            </select>
+
+                            <input type="text" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}" maxlength="14"
+                            />
+
+                            <button>-</button>
+
+                            <input type="radio" checked />Principal
+                        </div>
+                        <div>
+                            <select id="tel" name="telfield">
+                                <option selected>Pessoal</option>
+                                <option>Comercial</option>
+                            </select>
+
+                            <input type="text" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}" maxlength="14"
+                            />
+
+                            <button>-</button>
+
+                            <input type="radio" />Principal
+                        </div>
+                    </div>
+
+                    <div class="contact-information-address">
+                        <label for="address">
+                            <span>ENDEREÇO</span>
+                        </label>
+
+                        <select id="address" name="addressfield">
+                            <option selected>Pessoal</option>
+                            <option>Comercial</option>
+                        </select>
+
+                        <input type="text" id="address" name="addressfield" placeholder="Informe o endereço completo" maxlength="150" />
+
+                        <button>+</button>
+
+                        <input type="radio" />Principal
+                    </div>
+                </div>
+                <button type="button">^</button>
+            </section>
+
+
+            <hr>
+
+            <div class="footer">
+                <button type="submit">Salvar</button>
+                <button type="reset">Cancelar</button>
+            </div>
+        </div>
+    </form>
+</body>
+
+</html>
