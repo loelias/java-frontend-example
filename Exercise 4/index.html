@@ -6,195 +6,157 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./style.css" />
 </head>
 
 <body>
     <form action="" method="POST" class="form-person">
-        <div class="container">
-            <div class="header">
-                <h1>Adicionar Pessoa</h1>
-                <button type="button" onclick="alert('Cadastro Cancelado')">Cancelar Cadastro</button>
+        <div class="form-collumn header">
+            <div class="row justify-content-between">
+                <div class="col-6">
+                    <h1>Adicionar Pessoa</h1>
+                </div>
+                <div class="col-6 justify-align-flex-end">
+                    <button type="button" class="btn btn-danger" onclick="alert('Cadastro Cancelado')">Cancelar Cadastro</button>
+                </div>
             </div>
-            <hr>
-            <section>
-                <div class="personal-information">
-                    <div class="personal-information-type">
-                        <label for="type">
-                            <span>TIPO </span>
-                            <strong>
-                                <abbr title="Necessário preencher">*</abbr>
-                            </strong>
-                        </label>
+        </div>
 
-                        <select id="type" required name="typefield">
-                            <option selected>Pessoa Física</option>
-                            <option>Pessoa Jurídica</option>
-                        </select>
-                    </div>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <label for="typeperson">TIPO*</label>
+                <select class="custom-select" required id="typeperson" name="typeperson" required>
+                    <option selected>Pessoa Física</option>
+                    <option>Pessoa Jurídica</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="treatment">TRATAMENTO</label>
+                <input type="text" class="form-control" id="treatment" placeholder="Tratamento" name="treatmentfield">
+            </div>
+            <div class="form-group col-md-6">
+                <label for="nameperson">NOME*</label>
+                <input type="text" class="form-control" id="nameperson" placeholder="Informe o nome completo" required>
+            </div>
 
-                    <div class="personal-information-treatment">
-                        <label for="treatment">
-                            <span>TRATAMENTO</span>
-                        </label>
+            <div class="form-group col-md-3">
+                <label for="gender">GÊNERO</label>
+                <select class="custom-select" required id="gender" name="gender">
+                    <option selected>Masculino</option>
+                    <option>Feminino</option>
+                </select>
+            </div>
+            <div class="form-group col-md-3">
+                <label for="cpf">CPF</label>
+                <input type="text" class="form-control" id="cpf" placeholder="000.000.000-00" name="cpf" pattern="[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}"
+                    maxlength="14" minlength="14">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="rg">RG</label>
+                <input type="text" class="form-control" id="rg" placeholder="Informe o RG" name="cpf" pattern="[0-9]" maxlength="14" minlength="14">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="bday">NASCIMENTO</label>
+                <input type="date" class="form-control" id="bday" placeholder="Informe a data" name="bday" max="2018-12-31" min="1900-01-01">
+            </div>
+            <div class="form-group col-md-2">
+                <label for="lawyer">ADVOGADO?*</label>
+                <select class="custom-select" required id="lawyer" name="lawyer" required>
+                    <option selected>NÃO</option>
+                    <option>SIM</option>
+                </select>
+            </div>
 
-                        <input type="text" id="treatment" name="treatmentfield" placeholder="Tratamento" />
-                    </div>
+            <div class="form-group col-md-12">
+                <label for="qualification">QUALIFICAÇÃO</label>
+                <input type="text" class="form-control" id="qualification" placeholder="Insira mais informações sobre a pessoa" name="qualification"
+                    maxlength="300">
+            </div>
+            <div class="form-group col-md-12">
+                <label for="keywords">PALAVRAS-CHAVE</label>
+                <input type="text" class="form-control" id="keywords" placeholder="Informe as palavras-chave desejadas" name="keywords" maxlength="200">
+            </div>
 
-                    <div class="personal-information-name">
-                        <label for="name">
-                            <span>NAME </span>
-                            <strong>
-                                <abbr title="Necessário preencher">*</abbr>
-                            </strong>
-                        </label>
+            <div class="form-group col-md-2">
+                <label for="email">E-MAIL</label>
+                <select class="custom-select" required id="email" name="email">
+                    <option selected>Pessoal</option>
+                    <option>Comercial</option>
+                </select>
+            </div>
+            <div class="form-group col-md-4 align-flex-end">
+                <input type="email" class="form-control" placeholder="seuemail@algumacoisa.com" name="emailtext" maxlength="150">
+            </div>
+            <div class="form-group col-md-1 align-flex-end justify-center">
+                <button type="button" class="form-control circular-btn">+</button>
+            </div>
+            <div class="form-group col-md-5 align-flex-end">
+                <input type="radio" class="form-control w-20" id="principal" checked>
+                <label for="principal">Principal</label>
+            </div>
 
-                        <input type="text" required id="name" name="namefield" placeholder="Informe o nome completo" />
-                    </div>
+            <div class="form-group col-md-2">
+                <label for="tel">TELEFONE</label>
+                <select class="custom-select" required id="tel" name="tel">
+                    <option selected>Pessoal</option>
+                    <option>Comercial</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2 align-flex-end">
+                <input type="text" class="form-control" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}"
+                    maxlength="14" />
+            </div>
+            <div class="form-group col-md-1 align-flex-end justify-center">
+                <button type="button" class="form-control circular-btn">-</button>
+            </div>
+            <div class="form-group col-md-7 align-flex-end">
+                <input type="radio" class="form-control w-20" id="principal" name="telradio" checked>
+                <label for="principal">Principal</label>
+            </div>
+            <div class="form-group col-md-2">
+                <select class="custom-select" required id="tel" name="tel">
+                    <option selected>Pessoal</option>
+                    <option>Comercial</option>
+                </select>
+            </div>
+            <div class="form-group col-md-2 align-flex-end">
+                <input type="text" class="form-control" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}"
+                    maxlength="14" />
+            </div>
+            <div class="form-group col-md-1 align-flex-end justify-center">
+                <button type="button" class="form-control circular-btn">+</button>
+            </div>
+            <div class="form-group col-md-7 align-flex-end">
+                <input type="radio" class="form-control w-20" id="principal" name="telradio">
+                <label for="principal">Principal</label>
+            </div>
+            <div class="form-group col-md-2">
+                <label for="address">ENDEREÇO</label>
+                <select class="custom-select" required id="address" name="address">
+                    <option selected>Pessoal</option>
+                    <option>Comercial</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6 align-flex-end">
+                <input type="text" class="form-control" placeholder="Informe o endereço completo" name="address" maxlength="150">
+            </div>
+            <div class="form-group col-md-1 align-flex-end justify-center">
+                <button type="button" class="form-control circular-btn">+</button>
+            </div>
+            <div class="form-group col-md-3 align-flex-end">
+                <input type="radio" class="form-control w-20" id="principal" checked>
+                <label for="principal">Principal</label>
+            </div>
 
-                    <div class="personal-information-gender">
-                        <label for="gender">
-                            <span>GÊNERO</span>
-                        </label>
-
-                        <select id="gender" name="genderfield">
-                            <option selected>Masculino</option>
-                            <option>Feminino</option>
-                        </select>
-                    </div>
-
-                    <div class="personal-information-cpf">
-                        <label for="cpf">
-                            <span>CPF</span>
-                        </label>
-
-                        <input type="text" id="cpf" name="cpffield" pattern="[0-9]{3}[.][0-9]{3}[.][0-9]{3}[-][0-9]{2}" placeholder="000.000.000-00"
-                            maxlength="14" minlength="14" />
-                    </div>
-
-                    <div class="personal-information-rg">
-                        <label for="rg">
-                            <span>RG</span>
-                        </label>
-
-                        <input type="text" id="rg" name="rgfield" pattern="[0-9]" placeholder="Informe o RG" maxlength="15" />
-                    </div>
-
-                    <div class="personal-information-birthday">
-                        <label for="birthday">
-                            <span>NASCIMENTO</span>
-                        </label>
-
-                        <input type="date" id="birthday" name="bdayfield" placeholder="Informe a data" max="2018-12-31" min="1900-01-01" />
-                    </div>
-
-                    <div class="personal-information-lawyer">
-                        <label for="lawyer">
-                            <span>ADVOGADO?</span>
-                        </label>
-
-                        <select id="lawyer" required name="lawyerfield">
-                            <option selected>NÃO</option>
-                            <option>SIM</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="professional-information">
-                    <div class="professional-information-qualification">
-                        <label for="qualification">
-                            <span>QUALIFICAÇÃO</span>
-                        </label>
-
-                        <input type="text" id="qualification" name="qualificationfield" maxlength="300" />
-                    </div>
-
-                    <div class="professional-information-keywords">
-                        <label for="keywords">
-                            <span>PALAVRAS-CHAVE</span>
-                        </label>
-
-                        <input type="text" id="keywords" name="keywordsfield" maxlength="200" />
-                    </div>
-                </div>
-
-                <div class="contact-information">
-                    <div class="contact-information-email">
-                        <label for="emailfield">
-                            <span>E-MAIL</span>
-                        </label>
-                        <div>
-                            <select id="emailfield" name="emailfield">
-                                <option selected>Pessoal</option>
-                                <option>Comercial</option>
-                            </select>
-    
-                            <input type="email" id="emailtextfield" name="emailtextfield" placeholder="seuemail@algumacoisa.com" maxlength="150" />
-    
-                            <button>+</button>
-    
-                            <input type="radio" />Principal
-                        </div>
-                    </div>
-
-                    <div class="contact-information-tel">
-                        <label for="tel">
-                            <span>TELEFONE</span>
-                        </label>
-
-                        <div>
-                            <select id="tel" name="telfield">
-                                <option selected>Pessoal</option>
-                                <option>Comercial</option>
-                            </select>
-
-                            <input type="text" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}" maxlength="14"
-                            />
-
-                            <button>-</button>
-
-                            <input type="radio" checked />Principal
-                        </div>
-                        <div>
-                            <select id="tel" name="telfield">
-                                <option selected>Pessoal</option>
-                                <option>Comercial</option>
-                            </select>
-
-                            <input type="text" name="telfield" placeholder="(XX)XXXXX-XXXX" pattern="[(][0-9]{2,2}[)][0-9]{4,5}[-][0-9]{4,4}" maxlength="14"
-                            />
-
-                            <button>-</button>
-
-                            <input type="radio" />Principal
-                        </div>
-                    </div>
-
-                    <div class="contact-information-address">
-                        <label for="address">
-                            <span>ENDEREÇO</span>
-                        </label>
-
-                        <select id="address" name="addressfield">
-                            <option selected>Pessoal</option>
-                            <option>Comercial</option>
-                        </select>
-
-                        <input type="text" id="address" name="addressfield" placeholder="Informe o endereço completo" maxlength="150" />
-
-                        <button>+</button>
-
-                        <input type="radio" />Principal
-                    </div>
-                </div>
-                <button type="button">^</button>
-            </section>
-
-
-            <hr>
+            <div class="toggleform">
+                <button type="button" class="form-control" id="togglebtn">^</button>
+                <label for="togglebtn">Ocultar Campos</label>
+            </div>
 
             <div class="footer">
-                <button type="submit">Salvar</button>
-                <button type="reset">Cancelar</button>
+                <button class="btn btn-primary" type="submit">Salvar</button>
+                <button class="btn btn-secondary" type="reset">Cancelar</button>
             </div>
         </div>
     </form>
