@@ -1,13 +1,14 @@
+window.$ = require("../node_modules/jquery/dist/jquery.min.js");
 const adicionaDiv = require("../index.js");
 
-test('adicionar div-to-div', ()=> {
+test('Teste adicionar div, adiciona a div', () => {
+    
+    var novaDiv = document.createElement("div");
 
-    var novoDiv = document.createElement("div");
+    document.body.appendChild(novaDiv);
 
-    document.body.appendChild(novoDiv);
 
     var divs = document.getElementsByTagName("div");
-    
     expect(divs.length).toEqual(1);
 
     adicionaDiv();
