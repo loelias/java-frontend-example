@@ -11,6 +11,7 @@ Clone o projeto:
 ## Instalação
 ### Exercicio 1 - Cálculo de custo por departamento e cargo:
 
+- No Eclipse:
     - Abrir menu Arquivo > Abrir Projetos > Exercicio 1
     - Execute em Executar > Executar
  
