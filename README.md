@@ -12,12 +12,12 @@ Clone o projeto:
 ### Exercicio 1 - Cálculo de custo por departamento e cargo:
 
 - No Eclipse:
-    - Abrir menu Arquivo > Abrir Projetos > Exercicio 1
+    - Abrir menu Arquivo > Abrir Projetos > Exercise 1
     - Execute em Executar > Executar
  
 ### Exercício 2 - Add Div-to-Div (Bug do loop infinito):
 
-    $ cd Exercicio\ 2
+    $ cd Exercise\ 2
     $ npm install
     
 Rode os testes:
@@ -28,7 +28,7 @@ Abra a página `fix.html` em seu browser.
 
 ### Exercicio 3 - Função que retorna criticidade do animal por região:
 
-    $ cd Exercicio\ 3
+    $ cd Exercise\ 3
 
 Abra a página `index.html` em seu browser e execute a função no console de desenvolvedor: 
 
@@ -39,7 +39,7 @@ Abra a página `index.html` em seu browser e execute a função no console de de
 ![alt text](https://image.ibb.co/dYK7t9/mockupfrontend.png)
 
 
-    $ cd Exercicio\ 4
+    $ cd Exercise\ 4
     $ npm install
 
 Abra a página `index.html` em seu browser.
