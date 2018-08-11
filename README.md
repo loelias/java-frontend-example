@@ -8,13 +8,13 @@ Clone o projeto:
  - [Java EE 8](https://www.oracle.com/technetwork/java/javaee/documentation/ee8-install-guide-3894351.html)
  - [Eclipse](https://www.eclipse.org/downloads/packages/release/photon/r/eclipse-ide-java-ee-developers)
 
-### Instalação
-Exercicio 1 - Cálculo de custo por departamento e cargo:
+## Instalação
+### Exercicio 1 - Cálculo de custo por departamento e cargo:
 
     - Abrir menu Arquivo > Abrir Projetos > Exercicio 1
     - Execute em Executar > Executar
  
-Exercício 2 - Add Div-to-Div (Bug do loop infinito):
+### Exercício 2 - Add Div-to-Div (Bug do loop infinito):
 
     $ cd Exercicio\ 2
     $ npm install
@@ -25,7 +25,7 @@ Rode os testes:
     
 Abra a página `fix.html` em seu browser.
 
-Exercicio 3 - Função que retorna criticidade do animal por região:
+### Exercicio 3 - Função que retorna criticidade do animal por região:
 
     $ cd Exercicio\ 3
 
@@ -33,7 +33,7 @@ Abra a página `index.html` em seu browser e execute a função no console de de
 
     $ situacaoAnimal("Norte", "sapo cururu)
 
-Exercicio 4 - Frontend Mockup:
+### Exercicio 4 - Frontend Mockup:
 
 ![alt text](https://image.ibb.co/dYK7t9/mockupfrontend.png)
 
