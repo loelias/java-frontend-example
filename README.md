@@ -12,8 +12,9 @@ Clone o projeto:
 ### Exercicio 1 - Cálculo de custo por departamento e cargo:
 
 - No Eclipse:
-    - Abrir menu Arquivo > Abrir Projetos > Exercise 1
-    - Execute em Executar > Executar
+    - Abrir menu File > Open Projects from File System 
+    - Selecione Exercise 1/appClientModule pressionando em Directory e confirme
+    - Execute o (default package) no menu Run > Run
  
 ### Exercício 2 - Add Div-to-Div (Bug do loop infinito):
 
