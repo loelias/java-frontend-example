@@ -32,7 +32,7 @@ Abra a página `fix.html` em seu browser.
 
 Abra a página `index.html` em seu browser e execute a função no console de desenvolvedor: 
 
-    $ situacaoAnimal("Norte", "sapo cururu)
+    $ situacaoAnimal("Norte", "sapo cururu")
 
 ### Exercicio 4 - Frontend Mockup:
 
